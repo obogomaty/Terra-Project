@@ -205,7 +205,7 @@ resource "aws_instance" "wp" {
   ami           = "ami-0ea0f26a6d50850c5"
   instance_type = "t2.micro"
   subnet_id  =  aws_subnet.subnet1.id
-  vpc_security_group_ids  =  ["${aws_security_group.allowssh.id}"]
+  vpc_security_group_ids  =  [aws_security_group.allowssh.id]
   key_name  = "trial"
   
 
@@ -220,7 +220,7 @@ resource "aws_instance" "sql" {
   ami           = "ami-0ea0f26a6d50850c5"
   instance_type = "t2.micro"
   subnet_id  =  aws_subnet.subnet2.id
-  vpc_security_group_ids  =  ["${aws_security_group.allowsql.id}"]
+  vpc_security_group_ids  =  [aws_security_group.allowsql.id]
   key_name  = "trial"
   
 
