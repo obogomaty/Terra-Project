@@ -191,11 +191,11 @@ resource "aws_security_group" "allowsql" {
 
 
 
-resource "aws_key_pair" "trial" {
-    key_name   = "trial"
-    public_key = file("trial.pub")
+#resource "aws_key_pair" "trial" {
+ #   key_name   = "trial"
+  #  public_key = file("trial.pub")
   
-  }
+  #}
   
 
 
